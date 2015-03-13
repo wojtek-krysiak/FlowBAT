@@ -12,14 +12,16 @@ Router.onBeforeAction((pause) ->
       @render("setupAdminAccount")
     else
       @render("welcome")
-    pause()
+  else
+    @next()
 , {except: []})
 
 Router.onBeforeAction((pause) ->
   config = share.Configs.findOne()
   if config and not config.isSetupComplete
     @render("setupConfig")
-    pause()
+  else
+    @next()
 , except: ["setup"])
 
 Router.onBeforeAction("dataNotFound")
@@ -130,6 +132,7 @@ Router.onBeforeAction (pause) ->
       buttonPanelTemplateData: {token: Accounts._resetPasswordToken}
     ), document.body)
     delete Accounts._resetPasswordToken
+  @next()
 
 share.setPageTitle = (title, appendSiteName = true) ->
   if appendSiteName

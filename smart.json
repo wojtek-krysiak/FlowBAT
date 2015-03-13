@@ -1,9 +1,9 @@
-{
-  "packages": {
-    "iron-router": {},
-    "collection-hooks": {},
-    "fast-render": {},
-    "jade": {},
-    "handlebars-server": {}
-  }
-}
+// {
+//   "packages": {
+//     "iron-router": {},
+//     "collection-hooks": {},
+//     "fast-render": {},
+//     "jade": {},
+//     "handlebars-server": {}
+//   }
+// }
